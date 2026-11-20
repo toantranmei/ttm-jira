@@ -3,12 +3,12 @@
   "name": "io.github.toantranmei/ttm-jira",
   "description": "MCP server cho Jira Server / Data Center: tạo/sửa issue, trường tùy chỉnh, chuyển trạng thái, báo cáo",
   "repository": { "url": "https://github.com/toantranmei/ttm-jira", "source": "github" },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "ttm-jira",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "transport": { "type": "stdio" },
       "environmentVariables": [
         { "name": "JIRA_URL", "description": "Địa chỉ Jira, ví dụ https://jira.example.com", "isRequired": true },

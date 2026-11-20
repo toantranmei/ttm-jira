@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ttm-jira"
-version = "0.1.0"
+version = "0.1.1"
 description = "MCP server cho Jira Server / Data Center: tạo/sửa issue, trường tùy chỉnh, chuyển trạng thái, báo cáo"
 readme = "README.md"
 license = "MIT"
