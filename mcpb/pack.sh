@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Đóng gói bundle .mcpb (Claude Desktop) từ binary đã build trong dist/release/.
 #   mcpb/pack.sh <version> <thư mục archive> <thư mục ra>
-# Tạo: ttm-jira-darwin.mcpb (universal, lipo arm64+x64), ttm-jira-linux-x64.mcpb, ttm-jira-win32-x64.mcpb
+# Tạo: ttm-jira-darwin.mcpb (Apple Silicon; Mac Intel chưa hỗ trợ), ttm-jira-linux-x64.mcpb, ttm-jira-win32-x64.mcpb
 set -euo pipefail
 version="${1:?version}"; src="${2:?thư mục archive}"; out="${3:?thư mục ra}"
 here="$(cd "$(dirname "$0")" && pwd)"
@@ -25,9 +25,8 @@ extract() { # extract <target> -> in ra đường dẫn binary
   echo "$dir/ttm-jira"
 }
 
-arm="$(extract darwin-arm64)"; x64="$(extract darwin-x64)"
-uni="$work/ttm-jira-universal"; lipo -create "$arm" "$x64" -output "$uni"
-stage darwin darwin ttm-jira "$uni"
+arm="$(extract darwin-arm64)"
+stage darwin darwin ttm-jira "$arm"
 stage linux-x64 linux ttm-jira "$(extract linux-x64)"
 mkdir -p "$work/win"; unzip -o -q "$src/ttm-jira-windows-x64.zip" -d "$work/win"
 stage win32-x64 win32 ttm-jira.exe "$work/win/ttm-jira.exe"

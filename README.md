@@ -6,7 +6,7 @@ Gồm các việc mà MCP Jira thông thường chưa làm được: mã issue d
 
 ## Cài nhanh (khuyến nghị, không cần Python)
 
-Cài binary đã dựng sẵn cho macOS, Linux x64 và Windows x64:
+Cài binary đã dựng sẵn cho macOS Apple Silicon, Linux (x64 và arm64) và Windows x64. Mac Intel tạm chưa có bản dựng sẵn.
 
 **macOS / Linux**
 ```bash
