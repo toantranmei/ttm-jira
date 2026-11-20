@@ -66,6 +66,5 @@ jobs:
             artifacts/ttm-jira-*.tar.gz artifacts/ttm-jira-*.zip \
             artifacts/ttm-jira-*.sha256 \
             artifacts/ttm-jira-*.mcpb \
-            artifacts/ttm-jira-*.mcpb artifacts/ttm-jira-*.mcpb.sha256 \
             install.sh install.ps1 \
             --title "$GITHUB_REF_NAME" --generate-notes
