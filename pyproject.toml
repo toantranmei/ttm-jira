@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ttm-jira"
+version = "0.1.0"
+description = "MCP server cho Jira Server / Data Center: tạo/sửa issue, trường tùy chỉnh, chuyển trạng thái, báo cáo"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Toan Tran" }]
+keywords = ["mcp", "jira", "claude", "ai-agent"]
+dependencies = ["mcp==2.3.0"]
+
+[project.urls]
+Homepage = "https://github.com/toantranmei/ttm-jira"
+Repository = "https://github.com/toantranmei/ttm-jira"
+
+[project.scripts]
+ttm-jira = "ttm_jira.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ttm_jira"]

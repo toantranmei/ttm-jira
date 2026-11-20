@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.toantranmei/ttm-jira",
+  "description": "MCP server cho Jira Server / Data Center: tạo/sửa issue, trường tùy chỉnh, chuyển trạng thái, báo cáo",
+  "repository": { "url": "https://github.com/toantranmei/ttm-jira", "source": "github" },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "ttm-jira",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        { "name": "JIRA_URL", "description": "Địa chỉ Jira, ví dụ https://jira.example.com", "isRequired": true },
+        { "name": "JIRA_PERSONAL_TOKEN", "description": "Personal Access Token của chính bạn", "isRequired": true, "isSecret": true },
+        { "name": "JIRA_SSL_VERIFY", "description": "true/false, mặc định true", "isRequired": false },
+        { "name": "JIRA_DEFAULT_PROJECTS", "description": "Mã dự án mặc định, cách nhau dấu phẩy", "isRequired": false },
+        { "name": "JIRA_TZ_OFFSET", "description": "Múi giờ (giờ), mặc định 7", "isRequired": false },
+        { "name": "JIRA_MODULE_RULES", "description": "JSON phân nhóm bug theo chức năng", "isRequired": false }
+      ]
+    }
+  ]
+}
