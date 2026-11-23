@@ -10,7 +10,7 @@ Cài binary đã dựng sẵn cho macOS Apple Silicon, Linux (x64 và arm64) và
 
 **macOS / Linux**
 ```bash
-curl -fsSL https://raw.githubusercontent.com/toantranmei/ttm-jira/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/toantranmei/ttm-jira/main/install.sh | bash
 ```
 
 **Windows (PowerShell)**

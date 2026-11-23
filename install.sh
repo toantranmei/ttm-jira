@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 # Cài ttm-jira (binary đã build sẵn) vào ~/.local/bin. Không cần Python hay uv.
-#   curl -fsSL https://raw.githubusercontent.com/toantranmei/ttm-jira/main/install.sh | sh
+#   curl -fsSL https://raw.githubusercontent.com/toantranmei/ttm-jira/main/install.sh | bash
 # Biến tùy chọn: TTM_VERSION (mặc định bản mới nhất), TTM_INSTALL_DIR, TTM_BASE_URL (dùng để thử cục bộ).
+# Script dùng cú pháp bash (pipefail); sh của Debian/Ubuntu (dash) không chạy được.
+if [ -z "${BASH_VERSION:-}" ]; then
+  echo "Cần chạy bằng bash: curl -fsSL https://raw.githubusercontent.com/toantranmei/ttm-jira/main/install.sh | bash" >&2
+  exit 1
+fi
 set -euo pipefail
 
 NAME="ttm-jira"
